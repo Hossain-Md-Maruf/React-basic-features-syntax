@@ -10,7 +10,8 @@ class App extends Component
       { id:1, bookName:"1984", writer:"George Orwell"},
       { id:2, bookName:"The Da Vinci Code", writer:"Dan Brown"},
       { id:3, bookName:"The Alchemist", writer:"Paulo Coelho"}
-    ]
+    ],
+    showBooks: true
     
   };
 
@@ -39,6 +40,10 @@ class App extends Component
       books: books
     });
 }
+  toggleBooks = ()=>
+  {
+    this.setState({showBooks: !this.state.showBooks});
+  }
   
   render()
   {
@@ -60,11 +65,12 @@ class App extends Component
         />);
      
     });
-    console.log(books);
+    //console.log(books);
     return(
       <div className="App">
         <h1 style={style}>Book List</h1>
-      {books}
+        <button onClick={this.toggleBooks}>Toggle Books</button>
+      {this.state.showBooks ? books: null}
       </div>
     );
   }
