@@ -1,0 +1,12 @@
+.Book
+{
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: black;
+    color: wheat;
+
+}
+
